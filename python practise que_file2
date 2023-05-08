@@ -1,0 +1,208 @@
+QUE 1-Write A Python Program To Calculate Simple Interest?
+
+
+def simple_interest():
+    
+    a = int(input("Give Amount:  "))
+    
+    t = int(input("At What Time:  "))
+    
+    r = float(input("Rate:  "))
+    
+
+    b = a*t*r/100
+    print("simple interest will be: ",int(b))
+    
+simple_interest()
+
+
+
+
+QUE 2- Write a program which will find all such numbers which are divisible by 7 but are
+not a multiple of 5, between 2000 and 3200 (both included).
+The numbers obtained should be printed in a comma-separated sequence on a
+single line?
+
+
+
+def prog():
+    for i in range(2000,3201):
+        if i%7 == 0 and i%5 != 5:
+            
+            print(i, end=" ,")
+        
+prog()
+
+
+QUE 3- Check whether a year is a leap year or not?Hint - A leap year is exactly divisible by 4 except for century years (years ending with 00). The century year is a leap year only if it is perfectly
+divisible by 400?
+
+def leap_year():
+    a = int(input("Enter year:  "))
+    
+    if a%4 == 0 or a%400 == 0:
+        print(a, " is a Leap Year")
+        
+    else:
+        print(a," is not a Leap Year")
+        
+leap_year()
+
+
+
+
+QUE 4- Program to Calculate the Area of a Triangle?
+
+
+b = float(input("Base of tri:  "))
+
+h = float(input("Height of tri:  "))
+
+def area(b,h):
+    a = 1/2 * b * h
+    
+    print("Area of Triangle is: ",a)
+    
+area(b,h)
+
+
+
+QUE 5- Program to Find the Largest Among Three Numbers?
+
+
+n1 = int(input("give num1:  "))
+n2 = int(input("give num2:  "))
+n3 = int(input("give num3:  "))
+
+def larnum(n1,n2,n3):
+    if n1 >= n2:
+        print("n1 is greater",n1)
+    elif n2 >= n3:
+        print("n2 is greater",n2)
+    elif n3 >= n1:
+        print("n3 is greater ",n3)
+    else:
+        print("no one is greater")
+        
+        
+larnum(n1,n2,n3)        
+        
+        
+        
+        
+        
+QUE 6- Given two lists. Create a third list by picking an odd-index element from the first list and even index elements from second.
+listOne = [3 ,6, 9, 12, 15, 18, 21]
+listTwo = [4 ,8 ,12 ,16 ,20 ,24 ,28]
+
+Expected Outcome:
+[6, 12, 18, 4, 12, 20, 28]
+
+
+listOne = [3 ,6, 9, 12, 15, 18, 21]
+listTwo = [4 ,8 ,12 ,16 ,20 ,24 ,28]
+
+listthree = []
+
+def new_list():
+    
+   
+    
+    for i in listOne[1::2]:
+        
+        listthree.append(i)
+        # print(listthree)
+        
+        
+    for a in listTwo[::2]:
+        listthree.append(a)
+        # print(listthree)
+        
+    print(listthree)
+        
+new_list()
+        
+        
+QUE7 - Remove duplicates from a list and create a tuple and find the minimum and maximum number?
+
+
+sampleList = [87,45,41,65,94,41,99,94] 
+print(sampleList)
+
+a = sampleList
+b = (set(a))
+
+print(b)       
+
+c = list(b)   
+print(c)    
+   
+print(type(c))
+
+d = tuple(c)
+print(d)
+print(type(d))
+
+print("max",max(d))
+print("min",min(d))
+
+        
+        
+        
+        
+        
+        
+QUE 8- Given a dictionary get all values from the dictionary and add it in a list but don't add duplicates?
+
+speed = { 'jan':47,'feb':52,'march':47,'April':44,'May':52,'June': 53,'july':54, 'Aug':44, 'sep':54}
+# print(speed.items())
+
+s = speed.values()
+a = list(set(s))
+print(a)
+print(type(a))
+
+OR
+
+
+speed = { 'jan':47,'feb':52,'march':47,'April':44,'May':52,'June': 53,'july':54, 'Aug':44, 'sep':54}
+
+a = speed.values()
+print(a)
+
+b = []
+
+for i in a:
+    if i not in b:
+        b.append(i)
+        
+print(b)
+
+        
+        
+        
+        
+QUE9 - String characters balance Test: We'll say that a String sl and s2 is balanced if all the chars in the string sl are there in string s2. Characters
+position doesn't matter?
+
+a = input("give the word:  ")   
+b = input("give letter: ")     
+
+
+for i in a:
+  for k in b:
+      if i == k:
+        print("true")
+      else:
+        print("false")
+
+
+QUE 10-Write a program to find the factors of a number using a for loop and display it?
+
+num = int(input("give the num: "))
+
+for i in range(1,num):
+    
+    if num % i == 0:
+        # print(i)
+        print("Divisible of {0} is {1}. ".format(num,i)) 
