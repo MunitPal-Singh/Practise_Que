@@ -1,0 +1,214 @@
+QUE 1 - Accept two integer numbers from a user and calculate their product. 
+        If the product is greater than 1000 then return their sum as result else return their product as result.
+a = int(input("first int:  "))
+b = int(input("second int:  "))
+
+c = a*b
+
+if c > 1000:
+    d = a+b
+    print(d)
+    
+else:
+    print(c)    
+
+
+
+
+
+
+QUE 2 - Given a range of first 10 numbers, Iterate from start number to the end number 
+        and print the sum of the current number and previous number.
+
+def sumnum(num):
+    
+    pn = 0
+    
+    for i in range(num):
+        c = i
+        sum = c + pn
+        print("current:",c,"previous:",pn,"sum",sum)
+        pn = c
+        
+num = int(input("give a number:"))
+sumnum(num)
+
+
+
+
+
+
+
+QUE 3 - Accept string from a user and display only those characters which are present at an even index number.
+
+
+def display(strr):
+    for i in range(0,len(strr),2):
+        print(strr[i],i)
+    
+strr = input("give string input:")
+        
+display(strr)
+
+
+
+
+
+
+
+
+
+QUE 4- Given a string and an integer number n, remove characters from a string starting from zero up to n and return a new string?
+
+
+def removechar(word,num):
+    return word[num: ]
+
+result= removechar("python",2)
+print(result)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+QUE 4 - Given a list of numbers, return True if first and last number of a list is same?
+
+def listt():
+    
+    a = [50,60,70,80,20]
+    if a[0] == a[4]:
+        print(bool(a))
+    else:
+        print("no match")
+    
+
+       
+listt()
+
+
+
+
+
+
+
+QUE 5 - Given a list of numbers, Iterate it and print only those numbers which are divisible of 5?
+
+
+
+listt = [10,20,33,46,55]
+
+def a(listt):
+    
+    for i in listt:
+        if i % 5 == 0:
+            print(i)
+        
+a(listt)
+
+
+
+
+
+
+
+
+
+
+QUE 6 - Return the total count of string "Emma" appears in the given string,Given string is "Emma is good developer Emma is a writer"?
+
+
+
+txt = input("enter the line: ")
+word = input("enter the word: ")
+
+def word_count(txt,word):
+    count = 0
+    a = txt.split()
+    
+    for i in a:
+        if i == word:
+            count += 1
+    return count
+count = word_count(txt,word)
+print(count)
+
+
+
+
+
+
+
+
+QUE 7 - Reverse a given number and return true if it is the same as the original number?
+
+
+def rev_num(num):
+        
+        
+        b = (str(num)[::-1])
+        print(int(b))
+        if num == b:
+            print("True")
+        else:
+            print("False")
+num = input("Give Num:  ")    
+d = rev_num(num)
+
+
+
+
+
+
+
+QUE 9 - Given a two list of numbers create a new list such that new list should contain only odd numbers from the first list and even numbers from the
+second list?
+
+First List [10, 20, 23, 11, 17]
+Second List [13, 43, 24, 36, 12]
+Result List is [23, 11, 17, 24, 36,12]
+
+
+def new_list():
+     fl = [10, 20, 23, 11, 17]
+     sl = [13, 43, 24, 36, 12]
+     
+     al = []
+     for a in fl[ : ]:
+         if a % 2 != 0:
+             al.append(a)
+         
+     bl = []        
+     for b in sl[ : ]:
+         if b % 2 == 0:
+             bl.append(b)
+         
+     c = al + bl
+     print(c)
+         
+new_list()           
+         
+         
+         
+         
+         
+QUE 10 - Access the value of key 'history' from given dictionary?
+
+sample_dict ={
+    
+    "class": {
+        "student" : {
+            "name" : "Mike",
+            "marks" : {
+                "physics" : 70,
+                "history" : 80
+            }
+        }
+    }
+}
+
+print(sample_dict["class"]["student"]["marks"]["history"])
+
